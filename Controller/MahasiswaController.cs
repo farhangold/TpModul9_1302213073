@@ -1,18 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc;
 
 namespace tpModul9_1302213073.Controller
 {
     [Route("api/[controller]")]
-    [ApiController]
     public class MahasiswaController : ControllerBase
     {
         private static List<Mahasiswa> dataMahasiswa = new List<Mahasiswa>
         {
             new Mahasiswa("Farhan Mulya Argyanto", "1302213073"),
-            new Mahasiswa("Tangguh Laksana", "1302210025"),
-            new Mahasiswa("Fathur Rahman ", "13022130093"),
-            new Mahasiswa("Yesa Krisanto S", "1302210000"),
-            new Mahasiswa("Ghaza Gymnastiar", "1302210063")
+            new Mahasiswa("Glorious Satria", "1302210025"),
+            new Mahasiswa("Kevin ", "13022130019"),
+            new Mahasiswa("Rafidhia Haikal P", "1302210127"),
+            new Mahasiswa("Putu Vidya Ananda R", "1302213026")
         };
 
         // GET: api/<MahasiswaController>
@@ -35,13 +35,6 @@ namespace tpModul9_1302213073.Controller
         {
             dataMahasiswa.Add(newMahasiswa);
         }
-
-        //// PUT api/<MahasiswaController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] Mahasiswa updatedMahasiswa)
-        //{
-        //    dataMahasiswa[id] = updatedMahasiswa;
-        //}
 
         // DELETE api/<MahasiswaController>/5
         [HttpDelete("{id}")]
